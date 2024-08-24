@@ -272,6 +272,7 @@ header ul li:first-child{
 #works .workPics .pics img{
     width: 100%;
     height: 700px;
+    object-fit: cover;
 }
 #works .workPics .texts{
     position: absolute;
@@ -576,5 +577,8 @@ footer{
     }
     main{
         height: auto;
+    }
+    #works .workPics .pics img{
+        height: 300px;
     }
 }
