@@ -1,0 +1,580 @@
+body{
+    margin: 0;
+    scroll-behavior: smooth;
+    height: 5000px;
+}
+html{
+    scroll-behavior: smooth;
+}
+button{
+    cursor: pointer;
+    border: none;
+}
+main{
+    display: flex;
+    height: 800px;
+    background-color: #eceeec;
+}
+
+header{
+    position: absolute;
+    width: 85%;
+    background-color: black;
+    color : white;
+    margin: 25px 0 20px 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+    justify-content: space-between;
+    z-index: 6;
+    transition: .4s;
+    opacity: 0;
+}
+header ul{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+header ul li{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 10px;
+    transition: .3s;
+}
+header ul li a{
+    text-decoration: none;
+    color : inherit;
+    transition: .3s;
+}
+header ul li {
+    color: #ffffff96;
+}
+header ul li:first-child{
+    text-decoration: none;
+    color : white;
+}
+.bio{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+.text p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color : #c93f1d;
+    letter-spacing: 2px;
+    font-size: 22px;
+    transform: translateY(70px);
+    opacity: 0;
+    transition: .4s;
+}
+.text h1{
+    width: 550px;
+    margin: 0;
+    font-size: 60px;
+    transform: translateY(70px);
+    opacity: 0;
+    transition: .4s;
+}
+
+.bio .btns{
+    transform: translate(-35px,70px);
+    transition: .4s;
+    opacity: 0;
+}
+.aboutBtn{
+    color : black;
+}
+.bio .btns button{
+    margin: 120px 10px 40px;
+    padding: 20px 45px;
+    letter-spacing: 3px;
+    transition: .3s;
+}
+
+.bio .btns button:first-child:hover{
+    background-color: #c93f1d;
+}
+.bio .btns button:last-child{
+    background-color: white;
+    border: 2px solid black;
+}
+.bio .btns button:last-child:hover{
+    background-color: black;
+    color : white;
+}
+.pic{
+    width: 50%;
+    position: relative;
+    opacity: 0;
+    transition: .4s;
+}
+.pic .socials{
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 200px;
+    right : 40px;
+    bottom: 250px;
+    justify-content: space-between;
+}
+.pic .socials i{
+    color : white;
+    font-size: 25px;
+    cursor: pointer;
+}
+.pic img{
+    width: 100%;
+    height: 100%;
+    filter: brightness(.9);
+}
+#scrollBtn{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    color : white;
+    background-color: transparent;
+    border: 1px solid white;
+}
+#scrollBtn::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 90px;
+    background-color: white;
+    top : -130px;
+    right: 50%;
+}
+.getMyCv{
+    position: absolute;
+    padding: 20px 45px;
+    border: 1px solid white;
+    color : white;
+    background-color: transparent;
+    left: 50px;
+    bottom: 40px;
+    cursor: pointer;
+    transition: .3s;
+    letter-spacing: 3px;
+    font-weight: bold;
+    transform: translateX(-50px);
+    opacity: 0;
+}
+.getMyCv:hover{
+    background-color: white;
+}
+.getMyCv:hover a{
+    color : black;
+}
+.getMyCv a{
+    text-decoration: none;
+    color : white;
+}
+.getMyCv::before{
+    content : "";
+    position: absolute;
+    width: 220px;
+    height: 2px;
+    background-color: white;
+    top : 50%;
+    left : -220px;
+}
+#about{
+    padding: 150px 150px 50px;
+}
+#about .aboutMe{
+    position: relative;
+    font-size: 65px;
+}
+#about .aboutMe::before{
+    content: "01";
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top : -80px;
+    left : 0;
+    font-size: 200px;
+    color : #eceeec;
+    z-index: -1;
+}
+#about h1:not(.selected){
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-weight: 100;
+}
+.info{
+    margin-top: 70px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.info div{
+    margin: 10px 100px;
+}
+.info div h1{
+    position: relative;
+}
+.info div h1::before{
+    content: "";
+    position: absolute;
+    background-color: #c93f1d;
+    height: 20px;
+    width: 3px;
+    left : -10px;
+    bottom: 5px;
+}
+.info p{
+    margin: 0;
+}
+.info h2{
+    margin-bottom: 0;
+    font-weight: 200;
+}
+#works{
+    padding: 150px;
+}
+#works .selected{
+    position: relative;
+    font-size: 65px;
+}
+#works .selected::before{
+    content: "02";
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top : -80px;
+    left : 0;
+    font-size: 200px;
+    color : #eceeec;
+    z-index: -1;
+}
+#works .workPics{
+    margin: 150px 0;
+    border: 1px solid rgb(14, 2, 2);
+    display: flex;
+    flex-wrap: wrap;
+}
+#works .workPics .pics{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+#works .workPics .pics img{
+    width: 100%;
+    height: 700px;
+}
+#works .workPics .texts{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
+    transform: translateY(60px);
+}
+#works .workPics .texts h1{
+    font-size: 20px;
+    color : white;
+}
+#works .workPics .texts h3{
+    font-size: 16px;
+    color : #ffffff8d;
+}
+#works .workPics .pics:hover img{
+    filter: brightness(.1);
+    transition: .4s;
+}
+#works .workPics .pics:hover .texts{
+    transform: translateY(0px);
+    opacity: 1;
+    transition: .4s;
+}
+.hear{
+    text-align: center;
+    font-size: 34px;
+}
+.scrollDiv{
+    display: flex;
+    overflow: hidden;
+}
+.clients{
+    display: flex;
+}
+.client{
+    width: 400px;
+    height: 400px;
+    margin-right: 10px;
+    transition: .4s;
+}
+.aboutClient{
+    display: flex;
+    align-items: center;
+}
+.clientIMG{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.name,.job{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.job{
+    color : #0000009c;
+    font-size: 14px;
+}
+.txtt{
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+}
+.dots{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: -50px;
+}
+.dots div{
+    font-size: 80px;
+    cursor: pointer;
+    transition: .4s;
+    margin: 0 5px;
+}
+.dot2{
+    color : #00000081;
+}
+.numbers{
+    background-color: #eceeec;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.numbers div{
+    width: 45%;
+    margin: 40px 0;
+}
+.numbers div h1{
+    font-size: 100px;
+    margin: 0;
+}
+.numbers div h3{
+    font-size: 30px;
+    margin: 0;
+}
+.numbers div h4{
+    color : #00000072;
+    font-size: 25px;
+}
+#contact{
+    background-color: #1a1a1a;
+    padding: 120px;
+    color : white;
+    display: flex;
+    flex-wrap: wrap;
+}
+#contact .getInTouch{
+    position: relative;
+    font-size: 65px;
+    z-index: 4;
+    width: 100%;
+}
+#contact .getInTouch::before{
+    content: "03";
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top : -80px;
+    left : 0;
+    font-size: 200px;
+    color : #2b2b2b;
+    z-index: -1;
+}
+#contact .lorem{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 40px;
+    width: 50%;
+    color : #8a8a8a;
+    font-size: 30px;
+}
+.theContact{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    flex-wrap: wrap;
+}
+.theContact div h1{
+    margin: 0 0 30px;
+}
+.theContact p{
+    font-family: Arial, Helvetica, sans-serif;
+    color : #8a8a8a;
+    cursor: pointer;
+    transition: .3s;
+}
+.theContact a i{
+    font-size: 40px;
+    margin: 0 10px;
+    color : white;
+}
+.theContact p:hover{
+    color : white;
+}
+.contactBtns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+}
+.contactBtns button{
+    background-color: transparent;
+    border : 1px solid white;
+    padding: 30px 25px; 
+    width: 40%;
+    color : white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+    margin: 20px;
+}
+.contactBtns button:first-child{
+    color : white;
+    border: none;
+    background-color: #c93f1d;
+}
+.contactBtns button:first-child:hover{
+    background-color: #f1603c;
+}
+.contactBtns button:last-child:hover{
+    background-color: white;
+    color : black;
+}
+footer{
+    position: relative;
+    background-color: #1a1a1a;
+    color : white;
+    padding: 50px;
+    border-top: 1px solid rgb(119, 116, 116) ;
+}
+.socialIcons{
+    margin-left: 50px;
+}
+.socialIcons a{
+    margin: 5px;
+    color: #eceeec9c;
+    transition: .3s;
+    cursor: pointer;
+    font-size: 22px;
+}
+.socialIcons a:hover{
+    color : white;
+}
+.scrollToTop{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    background-color: transparent;
+    border: 1px solid white;
+    color : white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+@media (max-width : 1370px){
+    header ul , .socials{
+        display: none;
+    }
+    header{
+        width: 100%;
+        margin: 0;
+        position: fixed;
+    }
+    #about{
+        padding-inline: 15px;
+    }
+    .pic{
+        width: 100%;
+        padding: 0;
+    }
+    .bio{
+        position: absolute;
+        width: 100%;
+        z-index: 4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    .pic .socials{
+        display: none;
+    }
+    #works{
+        padding: 0;
+    }
+    #works .selected{
+        padding-left: 15px;
+    }
+    #works .workPics .pics{
+        width: 90%;
+        margin: 10px auto;
+    }
+    #works .workPics .pics img{
+        width: 100%;
+        height: 400px;
+    }
+    .numbers{
+        padding : 0;
+    }
+    .numbers div{
+        width: 100%;
+    }
+    #contact{
+        padding: 0;
+        padding-left: 15px;
+    }
+    #contact .lorem {
+        width: 100%;
+    }
+    .theContact{
+        width: 100%;
+    }
+    .contactBtns button{
+        width: 90%;
+    }
+    .text{
+        margin: 100px 20px 130px;
+    }
+    .text h1{
+        width: 90%;
+        font-size: 20px;
+        color : white;
+    }
+    .bio .btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bio .btns button{
+        margin: 5px auto;
+        padding: 15px 30px;
+    }
+    #scrollBtn::before{
+        display: none;
+    }
+    main{
+        height: auto;
+    }
+}
