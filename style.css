@@ -362,7 +362,7 @@ header ul li:first-child{
 }
 .numbers div{
     width: 45%;
-    margin: 40px 0;
+    margin: 40px 20px;
 }
 .numbers div h1{
     font-size: 100px;
@@ -421,11 +421,6 @@ header ul li:first-child{
     cursor: pointer;
     transition: .3s;
 }
-.theContact a i{
-    font-size: 40px;
-    margin: 0 10px;
-    color : white;
-}
 .theContact p:hover{
     color : white;
 }
@@ -476,7 +471,7 @@ footer{
     color: #eceeec9c;
     transition: .3s;
     cursor: pointer;
-    font-size: 22px;
+    font-size: 32px;
 }
 .socialIcons a:hover{
     color : white;
@@ -494,14 +489,13 @@ footer{
     cursor: pointer;
     border-radius: 50%;
 }
+
 @media (max-width : 1370px){
     header ul , .socials{
         display: none;
     }
     header{
-        width: 100%;
-        margin: 0;
-        position: fixed;
+        display: none;
     }
     #about{
         padding-inline: 15px;
@@ -565,12 +559,17 @@ footer{
     }
     .bio .btns{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        margin: -90px 0 0;
     }
-    .bio .btns button{
-        margin: 5px auto;
-        padding: 15px 30px;
+    .bio .btns a button{
+        margin: 5px 10px;
+        padding: 10px 15px;
+        transform: translateX(20px);
+    }
+    .aboutBtn{
+        transform: translateX(14px);
     }
     #scrollBtn::before{
         display: none;
